@@ -98,6 +98,5 @@ class Game {
             this.gameOver(winMessage, winCss);
         }
    }
-
 }
 
