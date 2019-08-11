@@ -12,7 +12,6 @@ class Game {
     }
 
     startGame() {
-      const hearts = document.querySelectorAll('#scoreboard ol li img');
       hearts.forEach(heart => heart.src = "images/liveHeart.png")
       
       const buttons = document.querySelectorAll('#qwerty button');
@@ -89,14 +88,13 @@ class Game {
     }
 
     checkForWin() {
-       let domLetters = Array.from(document.querySelectorAll('#phrase ul li'));
+       let domLetters = document.querySelectorAll('#phrase ul li');
         // checks if all letters are revealed.
        const winMessage = "You Won!"
        const winCss = "win"
        
-        if(letterShowCount === domLetters.length -1) {
+        if(this.activePhrase.letterShowCount === domLetters.length -1) {
             this.gameOver(winMessage, winCss);
         }
    }
 }
-
