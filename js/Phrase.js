@@ -2,6 +2,7 @@
  * Project 4 - OOP Game App
  * Phrase.js */
 const letterList = document.querySelector('#phrase ul');
+let letterShowCount = 0;
 
  class Phrase{
      constructor(phrase){
@@ -36,6 +37,7 @@ const letterList = document.querySelector('#phrase ul');
         domLetters.forEach(domLetter => {
             if(domLetter.innerHTML === clicked.innerHTML) {
                 domLetter.setAttribute('class', 'show');
+                letterShowCount++;
             }
         });
      }

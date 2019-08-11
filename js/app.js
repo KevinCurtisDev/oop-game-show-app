@@ -2,7 +2,7 @@
  * Project 4 - OOP Game App
  * app.js */
 
-const game = new Game();
+let game;
 
  //button event listeners
  const startButton = document.querySelector('#btn__reset');
@@ -10,11 +10,13 @@ const game = new Game();
 
 //Start button event listener
  startButton.addEventListener('click', () => {
+    game = new Game();
     game.startGame();
  });
 
  keyboardButtonListener.addEventListener('click', (e) => {
-    if(e.target.getAttribute('class','key')){
+    console.log(e.target)
+    if (e.target.className === 'key') {
         game.handleInteraction(e.target);
     }
  });
