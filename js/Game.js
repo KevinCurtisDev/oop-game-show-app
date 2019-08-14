@@ -11,6 +11,7 @@ class Game {
        ];
     }
 
+    //Starts a new game
     startGame() {
       hearts.forEach(heart => heart.src = "images/liveHeart.png")
       
@@ -35,6 +36,7 @@ class Game {
        this.activePhrase.addPhraseToDisplay();
     }
 
+    //Ends the game and displays appropriate win or lose message
     gameOver(message, css){
        // display screen overlay
        document.querySelector('#overlay').style.display= 'block'
@@ -46,13 +48,14 @@ class Game {
        document.querySelector('#overlay').setAttribute('class', css)
     }
 
-    
+    //Selects a random prhase from the phrases array
     getRandomPhrase() {
        //retrieve random phrase from phrase array
        let randomPhrase = Math.floor(Math.random() * this.phrases.length);
        return this.phrases[randomPhrase];
      }
 
+    //Handles keyboard inputs (virtual and physical)
     handleInteraction(clicked) {
         //disable selected letter's on screen keyboard button
        if(this.activePhrase.checkLetter(clicked)) {
@@ -71,6 +74,7 @@ class Game {
        }
     }
 
+    //Removes a life for every wrong guess
     removeLife() {
       const hearts = document.querySelectorAll('#scoreboard ol li img');
 
@@ -89,6 +93,7 @@ class Game {
        }
     }
 
+    //Checks if the player has won the game
     checkForWin() {
        let domLetters = document.querySelectorAll('.letter');
 
