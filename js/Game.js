@@ -58,6 +58,8 @@ class Game {
        if(this.activePhrase.checkLetter(clicked)) {
            //add chosen css class to letter's keyboard button
            clicked.classList.add('chosen');
+           //prevent further clicks on button
+           clicked.style.pointerEvents = 'none';
            // showMatchedLetter method on phrase, call checkForWin method.
            this.activePhrase.showMatchedLetter(clicked)
            //Check for a win condition
