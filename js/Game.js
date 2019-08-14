@@ -90,12 +90,14 @@ class Game {
     }
 
     checkForWin() {
-       let domLetters = document.querySelectorAll('#phrase ul li');
+       let domLetters = document.querySelectorAll('.letter');
+
         // checks if all letters are revealed.
        const winMessage = "You Won!"
        const winCss = "win"
        
-        if(this.activePhrase.letterShowCount === domLetters.length -1) {
+        //when no more letters have the class letter, all letters have been revealed
+        if(domLetters.length === 0) {
             this.gameOver(winMessage, winCss);
         }
    }
