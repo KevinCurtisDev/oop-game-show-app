@@ -3,11 +3,11 @@ class Game {
        this.missed = 0;
        this.activePhrase = null;
        this.phrases = [
-            new Phrase("phrase one"),
-            new Phrase("phrase two"),
-            new Phrase("phrase three"),
-            new Phrase("phrase four"),
-            new Phrase("phrase five")
+            new Phrase("A dime a dozen"),
+            new Phrase("A piece of cake"),
+            new Phrase("Beating around the bush"),
+            new Phrase("A piece of cake"),
+            new Phrase("Make my day")
        ];
     }
 
