@@ -22,6 +22,7 @@ const hearts = document.querySelectorAll('#scoreboard ol li img');
 
  //Event listener tracking virtual keyboard interaction
  keyboardButtonListener.addEventListener('click', (e) => {
+    e.target.style.pointerEvents  = 'none';
     if (e.target.className === 'key') {
        //call handleInteraction method from the game class
         game.handleInteraction(e.target);
@@ -39,6 +40,7 @@ document.addEventListener('keyup', e => {
    //match physical keyboard keys to virtual keys
    keyboardLetters.forEach(letterBtn => {
       if(key === letterBtn.innerHTML) {
+         letterBtn.style.pointerEvents = 'none';
          //call handleInteraction method using the letterBtn argument
          game.handleInteraction(letterBtn);
       }

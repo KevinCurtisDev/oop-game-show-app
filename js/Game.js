@@ -20,6 +20,11 @@ class Game {
        //clear lis from ul
       document.querySelector('#phrase ul').innerHTML = '';
       buttons.forEach(button => {
+         //reset pointer events for keyboard inputs
+         if(button.style.pointerEvents = 'none') {
+            button.style.pointerEvents = 'auto';
+         }
+
          if(button.getAttribute('class', 'chosen')) {
             button.classList.remove('chosen');
           }

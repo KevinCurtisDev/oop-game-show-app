@@ -7,9 +7,9 @@
 Phrase hunter is a phrase guessing game, built using object oriented JavaScript - implementing the class syntax. The idea of the game is for the player to guess all of the hidden letters of a randomly picked phrase, without losing all of their lives (five lives in total). If the phrase is revealed the player wins. If the phrase is not revealed before the player loses all of their lives the game is lost. 
 
 ## UX
- The user experience for this app was created around the idea of a game being "simple and fun." For this reason the UI should be minimalistic and intuitive. This is achieved by using obvious on screen cues. The title Phrase hunter followed by empty blocks, followed by an on screen keyboard, below whichare a number of hearts indicating lives/attempts.
+ The user experience for this app was created around the idea of a game being "simple and fun." For this reason the UI should be minimalistic and intuitive. This is achieved by using obvious on screen cues. The title Phrase hunter followed by empty blocks, followed by an on screen keyboard, below which are a number of hearts indicating lives/attempts.
 
- The user is able toseemlessly switch between the on screen keyboard and their operating system's physical keyboard. 
+ The user is able to seemlessly switch between the on screen keyboard and their operating system's physical keyboard. 
 
  As the user progresses through the game they are provided immediate on screen feedback as to whether they are closer to winning or losing the game.
 
